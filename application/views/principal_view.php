@@ -12,7 +12,7 @@
     <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="<?)base_url();?>index.php/principal">Principal</a></li>
+          <li class="active"><a href="<?base_url();?>index.php/principal">Principal</a></li>
           <li><a href="<?=base_url();?>index.php/nuevo/migrante">Nuevo migrante</a>
           <li><a href="<?=base_url();?>index.php/rutas">Rutas</a></li>
         </ul>
@@ -21,7 +21,7 @@
 	<hr/>
         <div class="row">
         	<div class="col-lg-3">
-        		<form role="form" action="<?=base_url();?>/index.php/principal" method="POST">
+        		<form role="form" action="<?=base_url();?>index.php/principal" method="POST">
         			<h3 class="text-center">Agregar nueva visita</h3>
         			<hr/>
         			<div class="form-group">

@@ -20,7 +20,8 @@ class Principal extends CI_Controller{
 
 		$this->load->model('migrante_model');
 		$this->load->model('albergue_model');
-		$albergue = $this->albergue_model->getAlbergue($this->session->userdata('sesion')['albergue']);
+		$albergue = $this->session->userdata('sesion');
+		$albergue = $this->albergue_model->getAlbergue($albergue['albergue']);
 		$data['abusos'] = $this->migrante_model->getAbusos();
 		$data['albergue'] = $albergue;
 		$this->load->view('principal_view',$data);

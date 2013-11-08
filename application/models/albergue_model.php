@@ -7,14 +7,14 @@ class Albergue_Model extends CI_Model{
 
 	function insert($data, $usuario){
 		$this->db->insert('usuario',$usuario);
-		$id = $this->db->get_where('usuario', array('usuario'=>$usuario['usuario']))->result()[0]->id_usuario;
+		$id = $this->db->get_where('usuario', array('usuario'=>$usuario['usuario']))->result()->row(0)->id_usuario;
 		$data['encargado'] = $id;
 		$this->db->insert('albergue',$data);
 	}
 
 	function getAlbergue($id){
 		$query = $this->db->get_where('albergue',array('id_albergue' => $id));
-		return $query->result()[0];
+		return $query->first_row();
 	}
 
 }

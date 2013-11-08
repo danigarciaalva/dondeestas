@@ -3,13 +3,14 @@ class Rutas extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
+		$this->load->model('migrante');
 	}
 
 	function index(){
-		$this->load->model('migrante_model','migrantes');
-		$data['migrantes'] = $this->migrantes->getMigrantes();
+		
+		$data['migrantes'] = $this->migrante->getMigrantes();
 		$this->load->view('rutas_view', $data);
-		$this->load->view('rutas_view');
+		//$this->load->view('rutas_view');
 	}
 }
 ?>
