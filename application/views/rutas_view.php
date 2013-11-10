@@ -4,35 +4,14 @@
 	<title>Migraciones</title>
 	<meta charset="utf-8" />
 	<link type="text/css" href="<?=base_url();?>/css/bootstrap.css" rel="stylesheet">
-	<style type="text/css">
-      html { height: 100%; }
-      body { height: 100%; margin: 0; padding: 0; }
-    </style>
-      <style>
-  .custom-combobox {
-    position: relative;
-    display: inline-block;
-  }
-  .custom-combobox-toggle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-left: -1px;
-    padding: 0;
-    /* support: IE7 */
-    *height: 1.7em;
-    *top: 0.1em;
-  }
-  .custom-combobox-input {
-    margin: 0;
-    padding: 0.3em;
-  }
-  </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+  <link type="text/css" href="<?=base_url();?>/css/rutas.css" rel="stylesheet">	
+  <link type="text/css" href="<?=base_url();?>/css/leaflet.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="<?=base_url();?>/js/leaflet.js"></script>
     <script type="text/javascript" src="<?=base_url();?>/js/jquery.js"></script>
     <script type="text/javascript" src="<?=base_url();?>/js/rutas.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>   
 </head>
 <body>
     <div class="container">
@@ -59,7 +38,7 @@
         	</div>
         	<div class="col-lg-8">
         		<h4>Ruta</h4>
-        		<div id="map_canvas" style="height:400px; width: 80%;"></div>
+        		<div id="map" style="height:400px; width: 80%;"></div>
         	</div>
         </div>
     </div>

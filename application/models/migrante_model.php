@@ -30,7 +30,7 @@ class Migrante_Model extends CI_Model{
 		$localidades = array();
 		foreach ($visitas as $visita) {
 			$albergue = $this->db->get_where('albergue', array('id_albergue' => $visita->albergue_id_albergue))->first_row();
-			$localidad = $this->db->get_where('localidades', array('id_localidades' => $albergue->localidades_id))->result()->first_row();
+			$localidad = $this->db->get_where('localidades', array('id_localidades' => $albergue->localidades_id))->first_row();
 			array_push($localidades, $localidad);
 		}
 		return $localidades;
